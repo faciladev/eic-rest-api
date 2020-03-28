@@ -22,12 +22,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'nw-&k!_!a#-pjojzqh3+=5i74y))c5$qqx9bn8h$s762e-*c5n'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'nw-&k!_!a#-pjojzqh3+=5i74y))c5$qqx9bn8h$s762e-*c5n')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['142.93.12.104','10.0.2.2', 'localhost']
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '10.0.2.2,localhost').split(',')
 
 
 # Application definition
@@ -126,6 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
