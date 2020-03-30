@@ -1,0 +1,141 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 28 14:04:36 2020] ***
+compiled with version: 7.5.0 on 28 March 2020 08:23:35
+os: Linux-4.15.0-91-generic #92-Ubuntu SMP Fri Feb 28 11:09:48 UTC 2020
+nodename: eic-app
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/vassals
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/eicadmin/mobile-rest-api/apiproject
+your processes number limit is 3838
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/eicadmin/mobile-rest-api/apiproject/apiproject.sock fd 3
+setuid() to 1000
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/eicadmin/mobile-rest-api/env
+Set PythonHome to /home/eicadmin/mobile-rest-api/env
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x565251ae2210
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x565251ae2210 pid: 1270 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1270)
+spawned uWSGI worker 1 (pid: 1272, cores: 1)
+spawned uWSGI worker 2 (pid: 1273, cores: 1)
+spawned uWSGI worker 3 (pid: 1274, cores: 1)
+spawned uWSGI worker 4 (pid: 1275, cores: 1)
+spawned uWSGI worker 5 (pid: 1276, cores: 1)
+[pid: 1273|app: 0|req: 1/1] 197.156.77.56 () {44 vars in 896 bytes} [Sat Mar 28 14:04:55 2020] GET /eic-backend-site/login/?next=/eic-backend-site/ => generated 1950 bytes in 199 msecs (HTTP/1.1 200) 8 headers in 431 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+SIGINT/SIGQUIT received...killing workers...
+Sat Mar 28 14:05:12 2020 - received message 0 from emperor
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+unlink(): Permission denied [core/uwsgi.c line 1660]
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 28 14:06:42 2020] ***
+compiled with version: 7.5.0 on 28 March 2020 08:23:35
+os: Linux-4.15.0-91-generic #92-Ubuntu SMP Fri Feb 28 11:09:48 UTC 2020
+nodename: eic-app
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/vassals
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/eicadmin/mobile-rest-api/apiproject
+your processes number limit is 3838
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/eicadmin/mobile-rest-api/apiproject/apiproject.sock fd 3
+setuid() to 1000
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/eicadmin/mobile-rest-api/env
+Set PythonHome to /home/eicadmin/mobile-rest-api/env
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55e1b7a33210
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55e1b7a33210 pid: 1291 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1291)
+spawned uWSGI worker 1 (pid: 1293, cores: 1)
+spawned uWSGI worker 2 (pid: 1294, cores: 1)
+spawned uWSGI worker 3 (pid: 1295, cores: 1)
+spawned uWSGI worker 4 (pid: 1296, cores: 1)
+spawned uWSGI worker 5 (pid: 1297, cores: 1)
+[pid: 1294|app: 0|req: 1/1] 197.156.77.56 () {44 vars in 896 bytes} [Sat Mar 28 14:06:53 2020] GET /eic-backend-site/login/?next=/eic-backend-site/ => generated 1950 bytes in 193 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1293|app: 0|req: 1/2] 197.156.77.56 () {44 vars in 890 bytes} [Sat Mar 28 14:06:59 2020] GET /eic-backend-site/ => generated 0 bytes in 155 msecs (HTTP/1.1 302) 8 headers in 323 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1297|app: 0|req: 1/3] 197.156.77.56 () {44 vars in 949 bytes} [Sat Mar 28 14:07:00 2020] GET /eic-backend-site/login/?next=/eic-backend-site/ => generated 1950 bytes in 212 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1293|app: 0|req: 2/4] 197.156.77.56 () {42 vars in 772 bytes} [Sat Mar 28 14:07:07 2020] GET / => generated 6277 bytes in 40 msecs (HTTP/1.1 200) 7 headers in 354 bytes (2 switches on core 0)
+Sat Mar 28 14:09:54 2020 - received message 1 from emperor
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 1293)...
+Gracefully killing worker 2 (pid: 1294)...
+Gracefully killing worker 3 (pid: 1295)...
+Gracefully killing worker 4 (pid: 1296)...
+Gracefully killing worker 5 (pid: 1297)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /etc/uwsgi/vassals
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/eicadmin/mobile-rest-api/apiproject/apiproject.sock)
+running /usr/local/bin/uwsgi
+*** has_emperor mode detected (fd: 6) ***
+[uWSGI] getting INI configuration from apiproject_uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Mar 28 14:09:55 2020] ***
+compiled with version: 7.5.0 on 28 March 2020 08:23:35
+os: Linux-4.15.0-91-generic #92-Ubuntu SMP Fri Feb 28 11:09:48 UTC 2020
+nodename: eic-app
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/vassals
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/eicadmin/mobile-rest-api/apiproject
+your processes number limit is 3838
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/eicadmin/mobile-rest-api/apiproject/apiproject.sock fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+PEP 405 virtualenv detected: /home/eicadmin/mobile-rest-api/env
+Set PythonHome to /home/eicadmin/mobile-rest-api/env
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x555c3fbe7d20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x555c3fbe7d20 pid: 1291 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1291)
+spawned uWSGI worker 1 (pid: 1346, cores: 1)
+spawned uWSGI worker 2 (pid: 1347, cores: 1)
+spawned uWSGI worker 3 (pid: 1348, cores: 1)
+spawned uWSGI worker 4 (pid: 1349, cores: 1)
+spawned uWSGI worker 5 (pid: 1350, cores: 1)
