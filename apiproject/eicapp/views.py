@@ -10,8 +10,8 @@ from rest_framework.decorators import api_view, permission_classes
 
 from rest_framework import generics, status, permissions, routers, serializers, viewsets
 from django.contrib.auth.models import User
-from eicapp.models import Sector, Email, ChinesePage, NewsEvent, Incentive, CountryProfile, Service
-from eicapp.serializers import SectorSerializer, UserSerializer, EmailSerializer, ChinesePageSerializer, NewsEventSerializer, IncentiveSerializer, CountryProfileSerializer, ServiceSerializer
+from eicapp.models import Slide, Sector, Email, ChinesePage, NewsEvent, Incentive, CountryProfile, Service
+from eicapp.serializers import SlideSerializer, SectorSerializer, UserSerializer, EmailSerializer, ChinesePageSerializer, NewsEventSerializer, IncentiveSerializer, CountryProfileSerializer, ServiceSerializer
 from eicapp.permissions import IsStaff
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -47,6 +47,11 @@ class CountryProfileViewSet(viewsets.ModelViewSet):
 class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+class SlideViewSet(viewsets.ModelViewSet):
+    queryset = Slide.objects.all()
+    serializer_class = SlideSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class EmailViewSet(viewsets.ModelViewSet):

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from eicapp.models import Sector, NewsEvent, Incentive, CountryProfile, Service, Email, ChinesePage
+from eicapp.models import Slide, Sector, NewsEvent, Incentive, CountryProfile, Service, Email, ChinesePage
 from django.contrib.auth.models import User
 import json
 
@@ -67,4 +67,9 @@ class ServiceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Service
         fields = ['id','ServiceId', 'Name', 'NameEnglish', 'DisplayName','DisplayNameEnglish', 'Abbreviation', 'Requirements']
+        
+class SlideSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Slide
+        fields = ['id','caption', 'url']
         

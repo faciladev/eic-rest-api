@@ -100,3 +100,14 @@ class Email(models.Model):
     class Meta:
         managed = True
         db_table = 'emails'
+
+class Slide(models.Model):
+    caption = models.TextField()
+    url = models.TextField()
+    
+    def __str__(self):
+        return self.caption
+
+    class Meta:
+        managed = True
+        db_table = 'slides'
