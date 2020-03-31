@@ -104,6 +104,8 @@ class Email(models.Model):
 class Slide(models.Model):
     caption = models.TextField()
     url = models.TextField()
+    screedId = models.CharField(max_length=250, blank=True, null=True)
+    argument = JSONField(blank=True, null=True)
     
     def __str__(self):
         return self.caption
