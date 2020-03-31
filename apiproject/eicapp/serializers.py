@@ -71,5 +71,5 @@ class ServiceSerializer(serializers.HyperlinkedModelSerializer):
 class SlideSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Slide
-        fields = ['id','caption', 'url', 'screenId', 'argument']
+        fields = ['id','caption', 'url', 'screen_id', 'argument']
         
