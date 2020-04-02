@@ -1,5 +1,5 @@
 from django.contrib import admin
-from eicapp.models import Sector, NewsEvent, Incentive, CountryProfile, Service, ChinesePage, Email
+from eicapp.models import Slide, Sector, NewsEvent, Incentive, CountryProfile, Service, ChinesePage, Email
 
 admin.site.register(Sector)
 admin.site.register(NewsEvent)
@@ -8,5 +8,6 @@ admin.site.register(CountryProfile)
 admin.site.register(Service)
 admin.site.register(ChinesePage)
 admin.site.register(Email)
+admin.site.register(Slide)
 
 admin.site.site_header = "EIC ADMIN ONLY"

@@ -5,7 +5,7 @@ class NewsEvent(models.Model):
     image = models.TextField(blank=True, null=True)
     title = models.TextField(blank=True, null=True)
     url = models.URLField(blank=True, null=True)
-    content = ArrayField(models.TextField(blank=True, null=True))
+    content = JSONField(blank=True, null=True)
     published = models.DateTimeField(blank=True, null=True)
     
     def __str__(self):
