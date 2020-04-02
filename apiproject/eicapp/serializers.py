@@ -32,6 +32,7 @@ class ChinesePageSerializer(serializers.HyperlinkedModelSerializer):
 
 class NewsEventSerializer(serializers.HyperlinkedModelSerializer):
     content = serializers.SerializerMethodField()
+    
     class Meta:
         model = NewsEvent
         fields = ['id', 'title','url', 'image','content','published']

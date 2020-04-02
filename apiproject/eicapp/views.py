@@ -7,6 +7,7 @@ from django.core.mail import send_mail
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
+from rest_framework.pagination import PageNumberPagination
 
 from rest_framework import generics, status, permissions, routers, serializers, viewsets
 from django.contrib.auth.models import User
@@ -23,11 +24,13 @@ class SectorViewSet(viewsets.ModelViewSet):
     queryset = Sector.objects.all()
     serializer_class = SectorSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    pagination_class = None
 
 class ChinesePageViewSet(viewsets.ModelViewSet):
     queryset = ChinesePage.objects.all()
     serializer_class = ChinesePageSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    pagination_class = None
 
 class NewsEventViewSet(viewsets.ModelViewSet):
     queryset = NewsEvent.objects.all()
@@ -38,21 +41,25 @@ class IncentiveViewSet(viewsets.ModelViewSet):
     queryset = Incentive.objects.all()
     serializer_class = IncentiveSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    pagination_class = None
 
 class CountryProfileViewSet(viewsets.ModelViewSet):
     queryset = CountryProfile.objects.all()
     serializer_class = CountryProfileSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    pagination_class = None
 
 class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    pagination_class = None
 
 class SlideViewSet(viewsets.ModelViewSet):
     queryset = Slide.objects.all()
     serializer_class = SlideSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    pagination_class = None
 
 class EmailViewSet(viewsets.ModelViewSet):
     queryset = Email.objects.all()
@@ -76,28 +83,3 @@ class EmailViewSet(viewsets.ModelViewSet):
 
 # TODO
 # Remove EmailViewset from the API Root view
-
-# class EmailList(APIView):
-#     # permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsStaff]
-#     def get(self, request, format=None):
-#         emails = Email.objects.all()
-#         serializer = EmailSerializer(emails, many=True)
-#         return Response(serializer.data)
-
-#     def post(self, request, format=None):
-#         serializer = EmailSerializer(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             body = request.data
-#             response = super(EmailViewSet, self).create(request, *args, **kwargs)
-#             subject = f'{body["sender"]} > {body["subject"]}'
-#             message = body['message']
-#             recepient = os.getenv('EMAIL_HOST_USER')
-#             try:
-#                 send_mail(subject, 
-#                 message, os.getenv('EMAIL_HOST_USER'), [recepient], fail_silently = False)
-#             except Exception as e:
-#                 print(e)
-#             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
