@@ -20,5 +20,6 @@ router.register(r'api/v1/slides', SlideViewSet)
 
 urlpatterns = [
     path(r'', include(router.urls)),
+    path(r'download', views.download)
     # path(r'api/', include('rest_framework.urls', namespace='rest_framework'))
 ]

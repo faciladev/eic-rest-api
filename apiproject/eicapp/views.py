@@ -1,4 +1,4 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, FileResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 import json
@@ -80,6 +80,17 @@ class EmailViewSet(viewsets.ModelViewSet):
             
         return response
 
+@csrf_exempt
+def download(request):
+    """
+    List all code snippets, or create a new snippet.
+    """
+    if request.method == 'GET':
+        path_to_apk = os.path.abspath(os.path.dirname(__file__)) + "/../static/Invest_in_Ethiopia.apk"
+        with open(path_to_apk, 'rb') as fh:
+            response = HttpResponse(fh, content_type="application/vnd.android.package-archive") 
+            response["Content-disposition"] = "attachment; filename={}".format("InvestInEthiopia.apk")
+            return response
 
 # TODO
 # Remove EmailViewset from the API Root view
